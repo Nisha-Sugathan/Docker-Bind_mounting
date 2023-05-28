@@ -40,6 +40,10 @@ docker container run -d -p 8080:80 -v /home/ec2-user/project/public_html/:/usr/l
 ``` 
 docker container exec webserver1 ls -l /usr/local/apache2/htdocs/
 ``` 
+Screenshot
+
+![docker_bind](https://github.com/Nisha-Sugathan/Docker-Bind_mounting/assets/134600837/6f38c1e7-f8f0-4173-8ebc-ef0bff80197d)
+
 ### Modify the httpd configuration file to serve the web page from home.html
 ``` 
  vi conf/httpd.conf 
