@@ -28,7 +28,7 @@ sudo usermod -a -G docker ec2-user
 
 ### Navigate to your document root and  create static web files
 ``` 
- cd /home/ec2-user/project/public_html/
+ cd /home/ec2-user/project/
  echo "<h1><center>  This is index page </center></h1>" > public_html/index.html
  echo "<h1><center>  This is home page </center></h1>" > public_html/home.html 
 ```
