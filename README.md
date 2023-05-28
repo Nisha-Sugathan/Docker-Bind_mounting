@@ -18,4 +18,23 @@ Add your username to docker group
  echo "<h1><center>  This is index page </center></h1>" > public_html/index.html
  echo "<h1><center>  This is home page </center></h1>" > public_html/home.html 
 ```
-
+# Mount the public_html directory to container (Bind mounting)
+``` 
+docker container run -d -p 8080:80 -v /home/ec2-user/project/public_html/:/usr/local/apache2/htdocs/ --name webserver1  httpd:alpine
+``` 
+# Container document root file listing
+``` 
+docker container exec webserver1 ls -l /usr/local/apache2/htdocs/
+``` 
+# Modify the httpd configuration file to serve the web page from home.html
+``` 
+ vi conf/httpd.conf 
+ grep "DirectoryIndex" conf/httpd.conf
+ ``` 
+ 
+ # Remount the "webservr1" container using the config file on local system
+ ``` 
+ docker container run -d -p 8080:80 -v /home/ec2-user/project/public_html/:/usr/local/apache2/htdocs/ -v /home/ec2-user/project/httpd.conf/:/usr/local/apache2/conf/httpd.conf --name webserver1  httpd:alpine
+ ``` 
+ # Conclusion
+ We can easily modify the httpd configuration files on the local machine and can remount the configuration file to the container using the docker container run commands
