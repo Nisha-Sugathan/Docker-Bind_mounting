@@ -6,7 +6,10 @@ https://hub.docker.com/_/httpd
 
 # Description
 Docker is an open platform for developing, shipping, and running applications.
-Here we use docker container which can be created to deploy a particular application or environment.
+Here we use docker container which can be created to deploy a particular application or environment. The -v flag on docker container Consists of three fields, separated by colon characters (:). 
+In the case of bind mounts, the first field is the path to the file or directory on the host machine.
+The second field is the path where the file or directory is mounted in the container.
+The third field is optional, and is a comma-separated list of options, such as ro, z, and Z.
 
 # Prerequisites
 Need to install docker on your machine
