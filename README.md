@@ -54,5 +54,9 @@ Screenshot
  ``` 
  docker container run -d -p 8080:80 -v /home/ec2-user/project/public_html/:/usr/local/apache2/htdocs/ -v /home/ec2-user/project/httpd.conf/:/usr/local/apache2/conf/httpd.conf --name webserver1  httpd:alpine
  ``` 
+### Output URL
+```
+http://<publicdns_name>:8080
+```
 ### Conclusion
  We can easily modify the httpd configuration files on the local machine and can remount the configuration file to the container using the docker container run commands
